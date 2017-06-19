@@ -47,16 +47,12 @@ import com.thoughtworks.selenium.Wait;
 public class Practice {
 
 	private static WebDriver driver;
-	
-	
-	
+		
 	@BeforeTest
 	
 	public void setUp() throws Exception{
 		
-		driver= new FirefoxDriver();
-		
-		
+		//driver= new FirefoxDriver();	
 		
 	}
 	
@@ -68,49 +64,8 @@ public class Practice {
 	@Test
 	
 	public void test() throws FileNotFoundException{
-		
-		//driver.get("http://www.amazon.in");
-		
-		//Read data from a excel file
-		String Filename= "C:/Users/shashi.prasad/Desktop/Login functionality.xlsx";
-		File file = new File(Filename);
-		FileInputStream fis= new FileInputStream(file);
-		String FileExtensionName= Filename.substring(Filename.indexOf("."));
-		
-		Workbook workbook= null;
-		if(FileExtensionName.equals(".xlsx")){
-			workbook= new XSSFWorkbook();
-		}else{
-			workbook=new HSSFWorkbook();
-		}
-		
-		Sheet sheet= workbook.getSheet("Test Cases");
-		
-		int RowCount= sheet.getLastRowNum()-sheet.getFirstRowNum();
-		for(int i=0;i<RowCount+1;i++){
-			Row row= sheet.getRow(i);
 			
-			for(int j=0;j<row.getLastCellNum();j++){
-				System.out.println(row.getCell(j).getStringCellValue()+ "||");
-			}
-			
-			
-			
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}
-	
-	
-	
+				System.out.println("First change for git learning");
+			}	
 
 }
